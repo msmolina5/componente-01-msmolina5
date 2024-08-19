@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface Componente01Msmolina5 {
+        "apiUrl": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +25,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLComponente01Msmolina5Element extends Components.Componente01Msmolina5, HTMLStencilElement {
+    }
+    var HTMLComponente01Msmolina5Element: {
+        prototype: HTMLComponente01Msmolina5Element;
+        new (): HTMLComponente01Msmolina5Element;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +38,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "componente-01-msmolina5": HTMLComponente01Msmolina5Element;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface Componente01Msmolina5 {
+        "apiUrl"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +61,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "componente-01-msmolina5": Componente01Msmolina5;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +69,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "componente-01-msmolina5": LocalJSX.Componente01Msmolina5 & JSXBase.HTMLAttributes<HTMLComponente01Msmolina5Element>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
